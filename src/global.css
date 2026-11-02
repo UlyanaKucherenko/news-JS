@@ -13,23 +13,50 @@ header h1 {
     font-weight: 800;
 }
 
-footer {
-    height: 100px;
+.footer {
+    padding: 20px 30px;
+    border-top: 1px solid #282a36;
+    margin-top: 40px;
+}
+
+.footer__container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+.footer__github {
+    color: #6272a4;
+    text-decoration: none;
+    font-weight: 600;
+    font-size: 16px;
+    transition: color 0.2s ease;
+}
+
+.footer__github:hover {
+    color: #8be9fd;
+}
+
+.footer__year {
+    color: #6272a4;
+    font-size: 14px;
+}
+
+.footer__rs {
     display: flex;
     align-items: center;
-    justify-content: center;
 }
-footer .copyright {
-    font-size: 14px;
-    color: #333;
-    text-align: center;
+
+.footer__rs-logo {
+    height: 32px;
+    transition: opacity 0.2s ease, transform 0.2s ease;
 }
-footer .copyright a {
-    color: #444;
-}
-footer .copyright a:hover {
-    color: #555;
-}
-footer .copyright:before {
-    content: '©';
+
+.footer__rs-logo:hover {
+    opacity: 0.8;
+    transform: scale(1.05);
 }
