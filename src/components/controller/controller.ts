@@ -21,6 +21,13 @@ class AppController extends AppLoader {
                 const sourceId = target.getAttribute('data-source-id');
                 if (sourceId && newsContainer.getAttribute('data-source') !== sourceId) {
                     newsContainer.setAttribute('data-source', sourceId);
+
+                    const sourceItems = document.querySelectorAll('.source__item');
+                    sourceItems.forEach((item): void => item.classList.remove('source__item--active'));
+                    target.classList.add('source__item--active');
+
+                    target.scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+
                     super.getResp(
                         {
                             endpoint: 'everything',

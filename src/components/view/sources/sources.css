@@ -8,16 +8,30 @@
     font: 300 1em 'Fira Sans', sans-serif;
 }
 
+.sources::-webkit-scrollbar {
+    display: none;
+}
+
 .source__item {
     background: none;
     border: 2px solid #30c5ff;
     font: inherit;
     line-height: 1;
     margin: 0.5em;
-    padding: 1em 2em;
+    padding: 0.8em 1.6em;
     color: #70d6ff;
     transition: 0.25s;
     cursor: pointer;
+    border-radius: 20px;
+}
+
+.source__item--active {
+    background: #70d6ff;
+    color: #12141a;
+    border-color: #70d6ff;
+    font-weight: 600;
+    box-shadow: 0 0 15px rgba(112, 214, 255, 0.45);
+    transform: translateY(-2px);
 }
 
 .source__item:hover,
@@ -27,6 +41,19 @@
     box-shadow: 0 0.5em 0.5em -0.4em #3fcc59;
     transform: translateY(-0.25em);
 }
+
+.source__item--active,
+.source__item--active:hover,
+.source__item--active:focus {
+    background: #70d6ff;
+    color: #12141a;
+    border-color: #70d6ff;
+    font-weight: 600;
+    box-shadow: 0 0 18px rgba(112, 214, 255, 0.55);
+    transform: translateY(-2px);
+    cursor: default;
+}
+
 
 .source__item-name {
     font-weight: 400;
