@@ -8,7 +8,7 @@ enum HttpStatus {
     Unauthorized = 401,
     NotFound = 404,
 }
- interface GetRespParams {
+interface GetRespParams {
     endpoint: Endpoint;
     options?: Partial<RequestOptions>;
 }
