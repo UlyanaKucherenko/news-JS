@@ -8,7 +8,7 @@
         "build": "webpack --config ./webpack.config.js --env mode=prod",
         "lint": "eslint . --ext .ts",
         "predeploy": "npm run build",
-        "deploy": "gh-pages -d dist"
+        "deploy": "gh-pages -d dist -m \"chore: deploy to gh-pages\""
     },
     "repository": {
         "type": "git",
